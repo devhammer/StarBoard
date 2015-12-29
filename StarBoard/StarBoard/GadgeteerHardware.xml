@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GadgeteerDefinitions xmlns="http://schemas.microsoft.com/Gadgeteer/2011/Hardware">
+  <ModuleDefinitions>
+    <!-- This module definition should be filled in.  Mouse over any attribute name to get more help about that attribute. -->
+    <!-- The Unique ID is auto-generated and does not usually need to be modified. -->
+    <!-- For file paths, do not use forward slash (/), use backslash (\) or it fails in Windows XP. -->
+    <ModuleDefinition Name="StarBoard"
+                  UniqueId="ac080592-5758-44e3-aa08-d3b2b037c06e"
+                  Manufacturer="Devhammer Enterprises"
+                  Description="A digitally addressable RGB LED star"
+                  InstanceName="StarBoard"
+                  Type="Gadgeteer.Modules.DevhammerEnterprises.StarBoard"
+                  ModuleSuppliesPower="false"
+                  HardwareVersion="1.0"
+                  Image="Resources\Image.jpg"
+                  BoardHeight="83"
+                  BoardWidth="61"
+                  MinimumGadgeteerCoreVersion="2.42.500"
+                  HelpUrl="http://devhammer.net/hardware"
+      			>
+
+      <Assemblies>
+        <Assembly MFVersion="4.2" Name="GTM.DevhammerEnterprises.StarBoard"/>
+        <Assembly MFVersion="4.3" Name="GTM.DevhammerEnterprises.StarBoard"/>
+
+        <Assembly MFVersion="4.2" Name="Gadgeteer.SPI" />
+        <Assembly MFVersion="4.3" Name="Gadgeteer.SPI" />
+      </Assemblies>
+
+      <Sockets>
+        <Socket Left="23" Top="43" Orientation="0" ConstructorOrder="2" TypesLabel="S">
+          <Types>
+            <Type>S</Type>
+          </Types>
+          <Pins>
+            <Pin Shared="false">3</Pin>
+            <Pin Shared="false">4</Pin>
+            <Pin Shared="false">5</Pin>
+            <Pin Shared="true">7</Pin>
+            <Pin Shared="true">8</Pin>
+            <Pin Shared="true">9</Pin>
+          </Pins>
+        </Socket>
+
+      </Sockets>
+
+      <!-- Uncomment to specify power consumption data for use by the VS designer. -->
+      <!-- Do not partially fill this in - either fill it all in or leave it out totally. -->
+      <!-- Values are in Volts or Amps respectively.  Use the special value Infinity, e.g. if the maximum current is unknown (such as for a motor). -->
+      <!--
+      <Power>
+        <PowerRequirements Voltage="3.3">
+          <TypicalCurrent>0.123</TypicalCurrent>
+          <MaximumCurrent>0.456</MaximumCurrent>
+        </PowerRequirements>
+        <PowerRequirements Voltage="5.0">
+          <TypicalCurrent>0.789</TypicalCurrent>
+          <MaximumCurrent>Infinity</MaximumCurrent>
+        </PowerRequirements>
+      </Power>
+      -->
+
+    </ModuleDefinition>
+  </ModuleDefinitions>
+</GadgeteerDefinitions>
